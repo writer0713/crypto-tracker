@@ -7,7 +7,7 @@ import Price from './pages/tabs/price.page';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/crypto-tracker/',
     element: <Root />,
     children: [
       { path: '', element: <Coins /> },
