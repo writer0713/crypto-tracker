@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: 'coins/:coinId',
+    path: '/crypto-tracker/coins/:coinId',
     element: <Coin />,
     children: [
       {
