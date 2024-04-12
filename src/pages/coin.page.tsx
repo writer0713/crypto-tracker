@@ -31,7 +31,7 @@ export default function Coin() {
   return (
     <div className="relative flex flex-col items-center w-full min-h-screen gap-10 px-10 py-20 dark:bg-dark dark:text-white">
       <button
-        onClick={() => navigate('/coins')}
+        onClick={() => navigate('/crypto-tracker/coins')}
         className="fixed flex items-center justify-center p-5 text-sm font-semibold text-black duration-200 rounded-full shadow-xl cursor-pointer size-12 left-5 bottom-5 bg-slate-300 hover:bg-pink-400 hover:text-white"
       >
         Back
