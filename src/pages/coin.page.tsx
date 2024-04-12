@@ -43,7 +43,7 @@ export default function Coin() {
         <>
           <h1 className="text-3xl font-bold">{coinDetails!.name}</h1>
           {/* rank symbol open source */}
-          <div className="w-[350px] py-3 rounded-xl grid grid-cols-3 bg-primary/80 dark:bg-secondary/80 bg-slate-900 text-sm">
+          <div className="w-[350px] py-3 rounded-xl grid grid-cols-3 bg-primary/80 dark:bg-secondary/80 text-sm">
             <div className="flex flex-col items-center justify-center">
               <p>RANK:</p>
               <p>{coinDetails!.rank}</p>
@@ -64,7 +64,7 @@ export default function Coin() {
           </div>
 
           {/* Supply */}
-          <div className="w-[350px] py-3 rounded-xl grid grid-cols-2 justify-between bg-primary/80 dark:bg-secondary/80 bg-slate-900 text-sm">
+          <div className="w-[350px] py-3 rounded-xl grid grid-cols-2 justify-between bg-primary/80 dark:bg-secondary/80 text-sm">
             <div className="flex flex-col items-center justify-center">
               <p>TOTAL SUPPLY:</p>
               <p>{coinPrice!.total_supply}</p>
@@ -85,7 +85,10 @@ export default function Coin() {
                   : ' bg-primary/80 dark:bg-secondary/80')
               }
             >
-              <Link to={`/coins/${coinId}/chart`} className="block">
+              <Link
+                to={`/crypto-tracker/coins/${coinId}/chart`}
+                className="block"
+              >
                 CHART
               </Link>
             </button>
@@ -98,7 +101,10 @@ export default function Coin() {
                   : ' bg-primary/80 dark:bg-secondary/80')
               }
             >
-              <Link to={`/coins/${coinId}/price`} className="block">
+              <Link
+                to={`/crypto-tracker/coins/${coinId}/price`}
+                className="block"
+              >
                 PRICE
               </Link>
             </button>
