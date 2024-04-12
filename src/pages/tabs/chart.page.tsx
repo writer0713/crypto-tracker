@@ -2,15 +2,21 @@ import { useQuery } from '@tanstack/react-query';
 import ApexChart from 'react-apexcharts';
 import { useParams } from 'react-router-dom';
 import fetchCoinHistory from '../../apis/coin-history.api';
+import { useThemeStore } from '../../stores/theme.store';
 
 export default function Chart() {
   const { coinId } = useParams();
+  const { isDark } = useThemeStore();
   const { isPending, data } = useQuery<CoinHistory[]>({
     queryKey: ['history', coinId],
     queryFn: () => fetchCoinHistory(coinId!),
     refetchInterval: 5000,
   });
-  console.log(data);
+
+  if (data?.hasOwnProperty('error')) {
+    return null;
+  }
+
   return (
     <div>
       {isPending ? (
@@ -35,7 +41,7 @@ export default function Chart() {
           ]}
           options={{
             theme: {
-              mode: 'dark',
+              mode: isDark ? 'dark' : 'light',
             },
             chart: {
               type: 'candlestick',
