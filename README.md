@@ -25,7 +25,7 @@
 
 ### TODOS
 
-- [ ] 라이트모드, 다크모드 구현
+- [x] 라이트모드, 다크모드 구현
 - [x] router 로 `coins` 와 `coin details` 페이지 나누기
 - [x] nested router 로 coin details 내부에서 `chart` 와 `price` 나누기
 - [x] coins 페이지에서 coins 데이터 뿌려주기
