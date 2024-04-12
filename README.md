@@ -13,6 +13,7 @@
 - react-router-dom@v6
 - tanstack/react-query@v5
 - apexcharts.js@v3
+- zustand@v4
 
 ### 사용한 API
 
